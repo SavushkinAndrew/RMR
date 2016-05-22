@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 23
@@ -17,10 +18,42 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+apply plugin: 'com.neenbedankt.android-apt'
+
 dependencies {
+
+    final ANDROID_SUPPORT = '23.4.0'
+    final BUTTER_KNIFE = '8.0.1'
+    final RX_JAVA = '1.1.0'
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    //ui
+    compile "com.android.support:appcompat-v7:$ANDROID_SUPPORT"
+    compile "com.android.support:support-v4:$ANDROID_SUPPORT"
+    compile "com.android.support:design:$ANDROID_SUPPORT"
+    //async
+    compile "io.reactivex:rxjava:$RX_JAVA"
+    compile "io.reactivex:rxandroid:$RX_JAVA"
+    //binding
+    compile "com.jakewharton:butterknife:$BUTTER_KNIFE"
+    apt "com.jakewharton:butterknife-compiler:$BUTTER_KNIFE"
+
 }
