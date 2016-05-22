@@ -18,7 +18,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -55,5 +55,7 @@ dependencies {
     //binding
     compile "com.jakewharton:butterknife:$BUTTER_KNIFE"
     apt "com.jakewharton:butterknife-compiler:$BUTTER_KNIFE"
+
+    compile 'com.parse:parse-android:1.13.0'
 
 }
