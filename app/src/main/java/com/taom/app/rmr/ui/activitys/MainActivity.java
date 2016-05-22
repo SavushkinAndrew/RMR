@@ -1,7 +1,9 @@
-package com.taom.app.rmr;
+package com.taom.app.rmr.ui.activitys;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.taom.app.rmr.R;
 
 public class MainActivity extends AppCompatActivity {
 
