@@ -8,11 +8,13 @@ import android.widget.EditText;
 import com.taom.app.rmr.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    EditText etLogin,etPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        etLogin = (EditText)findViewById(R.id.etlogin);
+        etPassword = (EditText)findViewById(R.id.etPassword);
 
     }
 
