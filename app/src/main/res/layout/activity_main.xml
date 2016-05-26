@@ -22,7 +22,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:id="@+id/imageView"
-            android:src="@drawable/logo"
+            android:src="@drawable/img"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/logotip" />
 
@@ -39,7 +39,8 @@
             android:imeOptions="actionUnspecified"
             android:inputType="text"
             android:maxLines="1"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:textColor="#000000" />
 
 
 
@@ -59,9 +60,23 @@
                 android:imeOptions="actionUnspecified"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textColor="#000000" />
 
         </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add"
+            android:id="@+id/view"
+            android:visibility="visible" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="read"
+            android:id="@+id/view2"
+            android:visibility="visible" />
 
     </LinearLayout>
 
