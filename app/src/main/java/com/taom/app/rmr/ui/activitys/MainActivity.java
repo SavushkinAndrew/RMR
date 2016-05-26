@@ -3,6 +3,7 @@ package com.taom.app.rmr.ui.activitys;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 import com.taom.app.rmr.R;
 
